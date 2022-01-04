@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+</head>
+<body>
+<h1><a href="/create">Create</a></h1>
+{% for item in users %}
+    <h1>The Id is {{ item.id }}.<br> The Name is {{ item.name }}. <br> The age is {{ item.age }}.
+        <a href="/{{ item.id }}/edit">Edit</a> <a href="/{{ item.id }}/delete">Delete</a></h1>
+{% endfor %}
+</body>
+</html>
